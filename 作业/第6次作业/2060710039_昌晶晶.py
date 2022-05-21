@@ -17,10 +17,8 @@ for o in ps:
         d[i] = len(o)
         i += 1
 
-print(d)
-
+# 导入xlsx包
 from openpyxl import Workbook
-
 wb = Workbook()
 temp = wb.active
 temp.cell(row=1, column=1).value = '段落'
@@ -30,4 +28,5 @@ for key, val in d.items():
     temp.cell(row=i, column=1).value = key
     temp.cell(row=i, column=2).value = val
     i += 1
+    # 用i来控制写入的行标
 wb.save('./test1.xlsx')
