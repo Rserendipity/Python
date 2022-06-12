@@ -31,3 +31,4 @@ string2 = "World"
 print(string1 + string2)
 # f"{}" 打开
 print(f"{string1}{string2}")
+
